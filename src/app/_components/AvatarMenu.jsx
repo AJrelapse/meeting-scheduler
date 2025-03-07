@@ -44,30 +44,6 @@ function AvatarMenu() {
                   variant="ghost"
                   size="sm"
                   className="flex gap-2 justify-start w-full"
-                  onClick={() => router.replace("/profile")}
-                >
-                  <User size={20} />
-                  Profile
-                </Button>
-              </DropdownMenuItem>
-
-              <DropdownMenuItem className="p-0">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="flex gap-2 justify-start w-full"
-                  onClick={() => router.replace("/settings")}
-                >
-                  <Settings size={20} />
-                  Settings
-                </Button>
-              </DropdownMenuItem>
-
-              <DropdownMenuItem className="p-0">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="flex gap-2 justify-start w-full"
                   onClick={handleLogout}
                 >
                   <LogOut size={20} />

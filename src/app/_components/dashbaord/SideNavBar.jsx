@@ -15,8 +15,8 @@ function SideNavBar() {
     path && setActivePath(path);
   }, [path]);
   return (
-    <div className="p-5 py-8">
-      <div className="flex justify-center">
+    <div className="p-5 py-8 bg-black h-full border-r border-violet-950">
+      <div className="flex justify-center bg-black">
         <Link href={"/dashboard"}>
           <Image src="/logo.svg" width={150} height={150} alt="logo" />
         </Link>
@@ -38,7 +38,7 @@ function SideNavBar() {
             <Button
               variant="ghost"
               className={`w-full flex gap-2 justify-start hover:bg-blue-100 hover:text-primary font-normal text-lg
-                        ${activePath == item.path && "text-primary bg-blue-100"}
+                        ${activePath == item.path && "text-primary bg-black"}
                         `}
             >
               <item.icon /> {item.name}
