@@ -34,17 +34,6 @@ export const Email = ({
           </Section>
 
           <Section style={content}>
-            <Row>
-              <Img
-                style={image}
-                alt="banner image"
-                width={620}
-                src={
-                  "https://firebasestorage.googleapis.com/v0/b/nextjs-meeting-scheduler-f5b1a.appspot.com/o/banner.png?alt=media&token=1b906ca0-ca66-4262-9763-3f8361fc7f44"
-                }
-              />
-            </Row>
-
             <Row style={{ ...boxInfos, paddingBottom: "0" }}>
               <Column>
                 <Heading
@@ -101,18 +90,6 @@ export const Email = ({
               </Column>
             </Row>
           </Section>
-
-          <Section style={containerImageFooter}>
-            <Img
-              style={image}
-              alt="banner image"
-              width={620}
-              src={
-                "https://firebasestorage.googleapis.com/v0/b/nextjs-meeting-scheduler-f5b1a.appspot.com/o/banner.png?alt=media&token=1b906ca0-ca66-4262-9763-3f8361fc7f44"
-              }
-            />
-          </Section>
-
           <Text
             style={{
               textAlign: "center",
@@ -120,8 +97,7 @@ export const Email = ({
               color: "rgb(0,0,0, 0.7)",
             }}
           >
-            © 2022 | Yelp Inc., 350 Mission Street, San Francisco, CA 94105,
-            U.S.A. | www.yelp.com
+            © 2025 | AJ Relapse - CSE - VIT Vellore
           </Text>
         </Container>
       </Body>
