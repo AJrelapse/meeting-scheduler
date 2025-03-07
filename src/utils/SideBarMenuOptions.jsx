@@ -3,7 +3,7 @@ import { Briefcase, Calendar} from "lucide-react";
 export default [
   {
     id: 1,
-    name: "Meeting Type",
+    name: "Dashboard",
     path: "/dashboard",
     icon: Briefcase,
   },

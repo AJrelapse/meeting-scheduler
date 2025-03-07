@@ -22,6 +22,15 @@ import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import TimeDateSelection from "./TimeDateSelection";
 import UserFormInfo from "./UserFormInfo";
+import localFont from "next/font/local";
+
+const aeonikPro = localFont({
+  src: "../../../../public/fonts/AeonikPro-Regular.ttf",
+  display: "swap",
+  weight: "400",
+});
+
+
 function MeetingTimeDateSelection({ meetingInfo, businessInfo }) {
   const [date, setDate] = useState(new Date());
   const [timeSlots, setTimeSlots] = useState();
@@ -138,7 +147,9 @@ function MeetingTimeDateSelection({ meetingInfo, businessInfo }) {
       className="p-5 py-10 shadow-lg m-5 border-t-8 mx-10 md:mx-26 lg:mx-56 my-10"
       style={{ borderTopColor: meetingInfo?.themeColor }}
     >
-      <Image src="/logo.svg" alt="logo" width={150} height={150} />
+      <div className={`${aeonikPro.className} text-2xl md:text-3xl font-bold`} style={{ color: "#DBFF00" }}>
+          AJ Relapse
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 mt-5">
         {/* Meeting Info  */}
         <div className="p-4 border-r">

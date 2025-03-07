@@ -1,6 +1,6 @@
 "use client";
 
-import MeetingEventList from "@/app/_components/meeting-type/MeetingEventList";
+import MeetingEventList from "@/app/_components/dashbaord/MeetingEventList";
 import { Input } from "@/components/ui/input";
 import { auth, db } from "@/services/firebase";
 import { doc, getDoc } from "firebase/firestore";
@@ -38,7 +38,7 @@ const Dashboard = () => {
   return (
     <div className="p-5">
       <div className="flex flex-col gap-5">
-        <h2 className="font-bold text-3xl">Meeting Event Type</h2>
+        <h2 className="font-bold text-3xl">List Of Events</h2>
         <Input placeholder="Search" className="max-w-xs " />
         <hr></hr>
       </div>

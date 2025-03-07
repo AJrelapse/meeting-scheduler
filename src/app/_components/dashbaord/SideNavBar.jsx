@@ -2,10 +2,16 @@
 import { Button } from "@/components/ui/button";
 import SideBarMenuOptions from "@/utils/SideBarMenuOptions";
 import { Plus } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import localFont from "next/font/local";
+
+const aeonikPro = localFont({
+  src: "../../../../public/fonts/AeonikPro-Regular.ttf",
+  display: "swap",
+  weight: "400",
+});
 
 function SideNavBar() {
   const path = usePathname();
@@ -18,7 +24,9 @@ function SideNavBar() {
     <div className="p-5 py-8 bg-black h-full border-r border-violet-950">
       <div className="flex justify-center bg-black">
         <Link href={"/dashboard"}>
-          <Image src="/logo.svg" width={150} height={150} alt="logo" />
+            <div className={`${aeonikPro.className} text-2xl md:text-3xl font-bold`} style={{ color: "#DBFF00" }}>
+              AJ Relapse
+            </div>
         </Link>
       </div>
 
