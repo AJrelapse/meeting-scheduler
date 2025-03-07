@@ -20,41 +20,42 @@ function SideNavBar() {
   useEffect(() => {
     path && setActivePath(path);
   }, [path]);
+
   return (
-    <div className="p-5 py-8 bg-black h-full border-r border-violet-950">
-      <div className="flex justify-center bg-black">
-        <Link href={"/dashboard"}>
-            <div className={`${aeonikPro.className} text-2xl md:text-3xl font-bold`} style={{ color: "#DBFF00" }}>
-              AJ Relapse
-            </div>
-        </Link>
-      </div>
-
-      <Link href={"/create-meeting"}>
-        <Button
-          className="flex gap-2 w-full 
-                mt-7
-                rounded-full"
+    <div className="w-64 p-6 py-10 h-full border-r border-gray-800 bg-black/80 backdrop-blur-xl shadow-lg">
+    <div className="flex justify-center">
+      <Link href={"/dashboard"}>
+        <div
+          className={`${aeonikPro.className} text-2xl md:text-3xl font-bold tracking-wide`}
+          style={{ color: "#DBFF00" }}
         >
-          <Plus /> Create
-        </Button>
+          AJ Relapse
+        </div>
       </Link>
-
-      <div className="mt-5 flex flex-col gap-5">
-        {SideBarMenuOptions.map((item, index) => (
-          <Link href={item.path} key={index}>
-            <Button
-              variant="ghost"
-              className={`w-full flex gap-2 justify-start hover:bg-blue-100 hover:text-primary font-normal text-lg
-                        ${activePath == item.path && "text-primary bg-black"}
-                        `}
-            >
-              <item.icon /> {item.name}
-            </Button>
-          </Link>
-        ))}
-      </div>
     </div>
+  
+    <Link href={"/create-meeting"}>
+      <Button className="flex items-center gap-2 w-full mt-8 rounded-full text-lg font-medium transition-all hover:scale-105">
+        <Plus className="w-5 h-5" /> Create Meeting
+      </Button>
+    </Link>
+    <hr className="mt-8 mb-8 border-gray-600 w-90% mx-auto" />
+    <div className="mt-6 flex flex-col gap-4">
+      {SideBarMenuOptions.map((item, index) => (
+        <Link href={item.path} key={index}>
+          <Button
+            variant="ghost"
+            className={`w-full flex gap-3 items-center text-lg font-medium px-4 py-3 rounded-lg transition-all duration-300 hover:bg-violet-500/10 hover:text-violet-400
+              ${activePath == item.path ? "text-violet-400 bg-violet-500/10" : "text-gray-300"}
+            `}
+          >
+           {item.name}
+          </Button>
+        </Link>
+      ))}
+    </div>
+  </div>
+  
   );
 }
 

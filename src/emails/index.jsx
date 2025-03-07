@@ -26,7 +26,7 @@ export const Email = ({
   return (
     <Html>
       <Head />
-      <Preview>Yelp recent login</Preview>
+      <Preview>Recent login</Preview>
       <Body style={main}>
         <Container>
           <Section style={logo}>

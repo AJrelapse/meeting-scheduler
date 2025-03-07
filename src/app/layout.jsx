@@ -1,8 +1,5 @@
 import { Toaster } from "../components/ui/sonner";
-import { Outfit } from "next/font/google";
 import "./globals.css";
-
-const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
   title: "CSI Meet Scheduler",
@@ -12,7 +9,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={outfit.className}>
+      <body className="font-apple">
         <main>{children}</main>
         <Toaster />
       </body>
