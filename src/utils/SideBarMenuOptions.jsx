@@ -1,4 +1,4 @@
-import { Briefcase, Calendar, Clock, Settings } from "lucide-react";
+import { Briefcase, Calendar} from "lucide-react";
 
 export default [
   {
@@ -12,11 +12,5 @@ export default [
     name: "Scheduled Meeting",
     path: "/dashboard/scheduled-meeting",
     icon: Calendar,
-  },
-  {
-    id: 3,
-    name: "Availability",
-    path: "/dashboard/availability",
-    icon: Clock,
   },
 ];

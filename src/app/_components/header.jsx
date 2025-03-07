@@ -1,7 +1,7 @@
 "use client";
 
-import { Button } from "../../components/ui/button";
-import { auth, signInWithGoogle } from "../../services/firebase";
+import { Button } from "@/components/ui/button";
+import { auth, signInWithGoogle } from "@/services/firebase";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAuthState } from "react-firebase-hooks/auth";
