@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useAuthState } from "react-firebase-hooks/auth";
-import Google from "../../../public/google.png"
 
 const Hero = () => {
   const [user] = useAuthState(auth);
@@ -19,10 +18,39 @@ const Hero = () => {
 
   return (
     <div className="flex flex-col items-center justify-center my-32">
-
+      <div className="hidden md:block">
+        <Image
+          src="/profile1.png"
+          width={100}
+          height={100}
+          className="h-[100px] z-[-10] object-cover rounded-full absolute top-24 right-20"
+          alt="profile"
+        />
+        <Image
+          src="/profile2.png"
+          width={100}
+          height={100}
+          className="h-[100px] z-[-10] object-cover rounded-full absolute top-40 left-24"
+          alt="profile"
+        />
+        <Image
+          src="/profile3.png"
+          width={100}
+          height={100}
+          className="h-[100px] z-[-10] object-cover rounded-full absolute bottom-20 left-36"
+          alt="profile"
+        />
+        <Image
+          src="/profile4.png"
+          width={100}
+          height={100}
+          className="h-[100px] z-[-10] object-cover rounded-full absolute right-16 bottom-32"
+          alt="profile"
+        />
+      </div>
       <div className="text-center max-w-3xl">
         <h2 className="font-bold text-[60px] text-slate-700">
-          Meeting Scheduler
+          Easy Scheduling ahead
         </h2>
         <h2 className="font-xl mt-5 text-slate-700">
           Scheduly is your scheduling automation platform for eliminating the
@@ -40,7 +68,7 @@ const Hero = () => {
                   onClick={handleSignInWithGoogle}
                 >
                   <Image
-                    src={Google}
+                    src="/google.png"
                     width={25}
                     height={25}
                     alt="google"
