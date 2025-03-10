@@ -79,3 +79,10 @@
     border-color: hsl(var(--border));
   }
 }
+
+@layer base {
+  .font-apple {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "San Francisco",
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+}

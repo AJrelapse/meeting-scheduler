@@ -54,7 +54,7 @@ function MeetingForm({ setFormValue }) {
         locationType: locationType,
         locationUrl: locationUrl,
         themeColor: themeColor,
-        businessId: user?.uid, // Store UID as a string, not a document reference
+        businessId: user?.uid,
         createdBy: user?.email,
       });
   
