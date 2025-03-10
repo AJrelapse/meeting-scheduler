@@ -6,6 +6,14 @@ import { Clock, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import localFont from "next/font/local";
+
+// ✅ Correct font import (path should start from "/fonts", not "./fonts")
+const aeonikPro = localFont({
+  src: "../../../../public/fonts/AeonikPro-Regular.ttf",
+  display: "swap",
+  weight: "400",
+});
 
 function PreviewMeeting({ formValue }) {
   const [date, setDate] = useState(new Date());
@@ -40,7 +48,10 @@ function PreviewMeeting({ formValue }) {
       className="p-5 py-10 shadow-lg m-5 border-t-8"
       style={{ borderTopColor: formValue?.themeColor }}
     >
-      <Image src="/logo.svg" alt="logo" width={150} height={150} />
+      
+      <div className={`${aeonikPro.className} text-2xl md:text-3xl font-bold`} style={{ color: "#DBFF00" }}>
+          AJ Relapse
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 mt-5">
         {/* Meeting Info  */}
         <div className="p-4 border-r">

@@ -4,11 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { auth, db } from "@/services/firebase";
 import { doc, setDoc } from "firebase/firestore";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "sonner";
+import localFont from "next/font/local";
+
+const aeonikPro = localFont({
+  src: "../../../../public/fonts/AeonikPro-Regular.ttf",
+  display: "swap",
+  weight: "400",
+});
 
 const CreateBusiness = () => {
   const [businessName, setBusinessName] = useState();
@@ -28,7 +34,9 @@ const CreateBusiness = () => {
 
   return (
     <div className="p-14 items-center flex flex-col gap-20 my-10">
-      <Image src="/logo.svg" width={200} height={200} />
+      <div className={`${aeonikPro.className} text-2xl md:text-3xl font-bold`} style={{ color: "#DBFF00" }}>
+          AJ Relapse
+      </div>
       <div className="flex flex-col items-center gap-4 max-w-3xl">
         <h2 className="text-4xl font-bold">
           What should we call your business?
